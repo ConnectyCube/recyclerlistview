@@ -7,6 +7,7 @@ export interface ScrollViewDefaultProps {
     onSizeChanged: (dimensions: Dimension) => void;
     horizontal: boolean;
     canChangeSize: boolean;
+    inversed: boolean;
     style?: CSSProperties | null;
     useWindowScroll: boolean;
 }

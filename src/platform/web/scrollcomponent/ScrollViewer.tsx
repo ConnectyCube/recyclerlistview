@@ -10,6 +10,7 @@ import { ScrollEventNormalizer } from "./ScrollEventNormalizer";
 export default class ScrollViewer extends BaseScrollView {
     public static defaultProps = {
         canChangeSize: false,
+        inversed: false,
         horizontal: false,
         style: null,
         useWindowScroll: false,

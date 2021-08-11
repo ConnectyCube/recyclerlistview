@@ -96,6 +96,7 @@ export interface RecyclerListViewProps {
     initialRenderIndex?: number;
     scrollThrottle?: number;
     canChangeSize?: boolean;
+    inversed?: boolean;
     useWindowScroll?: boolean;
     disableRecycling?: boolean;
     forceNonDeterministicRendering?: boolean;
@@ -120,6 +121,7 @@ export interface RecyclerListViewState {
 export default class RecyclerListView<P extends RecyclerListViewProps, S extends RecyclerListViewState> extends ComponentCompat<P, S> {
     public static defaultProps = {
         canChangeSize: false,
+        inversed: false,
         disableRecycling: false,
         initialOffset: 0,
         initialRenderIndex: 0,
@@ -772,6 +774,9 @@ RecyclerListView.propTypes = {
 
     //Specify if size can change, listview will automatically relayout items. For web, works only with useWindowScroll = true
     canChangeSize: PropTypes.bool,
+
+    // Render scroll item from bottom to top
+    inversed: PropTypes.bool,
 
     //Web only. Layout elements in window instead of a scrollable div.
     useWindowScroll: PropTypes.bool,

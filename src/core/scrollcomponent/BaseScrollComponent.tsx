@@ -8,6 +8,7 @@ export interface ScrollComponentProps {
     contentHeight: number;
     contentWidth: number;
     canChangeSize?: boolean;
+    inversed?: boolean;
     externalScrollView?: { new(props: ScrollViewDefaultProps): BaseScrollView };
     isHorizontal?: boolean;
     renderFooter?: () => JSX.Element | JSX.Element[] | null;
